@@ -89,8 +89,8 @@ class DS_generator(Sequence):
         korr = []
 
         for i in self.column_index:              # выбираем нужные поправки
-            if i <= 4:                      # для первых пяти фич
-                korr.append(korrs[i])
+            if i <= 5:                      # для первых пяти фич
+                korr.append(korrs[i-1])
 
         x = list(np.transpose(x))                       # (batch, 8) -> (8, batch)
 
