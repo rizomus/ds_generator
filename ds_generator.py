@@ -119,6 +119,4 @@ class DS_generator(Sequence):
         x_batch = self.x[indices]
         y_batch = self.y[indices]
         x_batch = self.add_korr_and_norm(x_batch)                 # случайная поправка для 5 фичей
-        x_batch = np.expand_dims(x_batch, axis=0)
-        y_batch = np.expand_dims(y_batch, axis=0)
         return x_batch, y_batch
